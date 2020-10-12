@@ -1,0 +1,123 @@
+// google font we use
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+// creating variable with sass
+$primary-text: #777777;
+
+.todo-wrapper {
+    width: 600px;
+    margin: 30px auto 0;
+    background-color: #e4e4e4;
+  .add-task {
+     padding: 15px;
+     background-color:coral;
+     position: relative;
+     input {
+       display:inline-block;
+       padding: 10px 15px;
+       border:none;
+       border-radius:5px;
+       background-color: rgba(255, 255, 255, .3);
+       width: calc(100% - 40px);
+       color:#FFFFFF;
+       font-size: 20px;
+     }
+     input:focus {
+         outline: none;
+     }
+     .add {
+         position: absolute;
+         height:43px;
+         width:43px;
+         background-color: #FFFFFF;
+         right:5px;
+         border-radius: 50%;
+         line-height: 43px;
+         text-align: center;
+         color: coral;
+         cursor: pointer;
+         font-size:34px;
+         transition: transform .5s ease;
+     }
+     span:hover {
+         transform: rotate(90deg);
+     }
+ }
+ .tasks-content {
+     padding:15px;
+
+     .no-tasks-messages {
+         color:$primary-text;
+         font-weight: bold;
+         text-transform: capitalize;
+     }
+    //  selecting direct childs spans inside tasks-content wrapper
+     > span {
+         display: block;
+         background-color:#FFFFFF;
+         padding: 10px;
+     }
+    //  to prevent margin bottom on last child sapn
+     > span:not(:last-child) {
+         margin-bottom: 10px;
+     }
+
+     .task-box .delete {
+         float:right;
+         background-color: #e91e1e;
+         padding: 5px 10px;
+         color:#FFFFFF;
+         font-size: 12px;
+         font-weight: bold;
+         border-radius: 5px;
+         cursor:pointer
+     }
+     .task-box.finished {
+         text-decoration: line-through;
+         background-color: rgba(25, 206, 55, 0.3);
+     }
+ }   
+
+}
+
+//  start task stats styles
+.tasks-stats {
+    overflow: hidden;
+    margin: 10px auto;
+    width:600px;
+    font-size: 15px;
+    font-weight: bold;
+
+    .tasks-count {
+        width: 50%;
+        float: left;
+        padding:10px;
+        span {
+            background-color: #E91E63;
+        }
+    }
+    .completed-count {
+        width: 50%;
+        float: right;
+        padding:10px;
+        text-align: right;
+        span {
+            background-color: #03A9F4;
+        }
+    }
+    .tasks-count span,
+    .completed-count span {
+       color:#FFFFFF;
+       padding: 1px 5px;
+        font-size: 10px;
+        border-radius:4px;
+        font-weight: bold;
+    }
+}
