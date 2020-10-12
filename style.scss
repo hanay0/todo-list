@@ -20,6 +20,7 @@ $primary-text: #777777;
      background-color:coral;
      position: relative;
      input {
+       font-family: 'Montserrat', sans-serif;
        display:inline-block;
        padding: 10px 15px;
        border:none;
@@ -28,10 +29,11 @@ $primary-text: #777777;
        width: calc(100% - 40px);
        color:#FFFFFF;
        font-size: 20px;
-     }
-     input:focus {
-         outline: none;
-     }
+       &:focus {
+        outline: none;
+    }
+}
+     
      .add {
          position: absolute;
          height:43px;
@@ -44,9 +46,9 @@ $primary-text: #777777;
          color: coral;
          cursor: pointer;
          font-size:34px;
-         transition: transform .5s ease;
+         transition: transform .2s ease;
      }
-     span:hover {
+     span:hover .add {
          transform: rotate(90deg);
      }
  }

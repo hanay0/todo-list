@@ -21,6 +21,7 @@ body {
 }
 
 .todo-wrapper .add-task input {
+  font-family: 'Montserrat', sans-serif;
   display: inline-block;
   padding: 10px 15px;
   border: none;
@@ -47,13 +48,13 @@ body {
   color: coral;
   cursor: pointer;
   font-size: 34px;
-  -webkit-transition: -webkit-transform .5s ease;
-  transition: -webkit-transform .5s ease;
-  transition: transform .5s ease;
-  transition: transform .5s ease, -webkit-transform .5s ease;
+  -webkit-transition: -webkit-transform .2s ease;
+  transition: -webkit-transform .2s ease;
+  transition: transform .2s ease;
+  transition: transform .2s ease, -webkit-transform .2s ease;
 }
 
-.todo-wrapper .add-task span:hover {
+.todo-wrapper .add-task span:hover .add {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
