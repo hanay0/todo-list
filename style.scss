@@ -6,6 +6,7 @@
 }
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: lighten(#FF7F50, 15%)
 }
 
 // creating variable with sass
@@ -83,6 +84,7 @@ $primary-text: #777777;
      }
      .task-box.finished {
          text-decoration: line-through;
+         opacity: .5;
          background-color: rgba(25, 206, 55, 0.3);
      }
  }   
